@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>zethathon</h1>
+    </div>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Connect with Service Providers Instantly</h1>
+            <p>Find the perfect service or list your professional skills. Join ServiceHub today and unlock a world of opportunities!</p>
+            
+            <div class="login-buttons">
+                <a href="#" class="btn btn-customer" onclick="openModal('customer-login')">Customer Login</a>
+                <a href="#" class="btn btn-provider" onclick="openModal('provider-login')">Provider Login</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Customer Login Modal -->
+    <div id="customer-login" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('customer-login')">&times;</span>
+            <h2>Customer Login</h2>
+            <form id="customerLoginForm" onsubmit="handleCustomerLogin(event)">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Provider Login Modal -->
+    <div id="provider-login" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('provider-login')">&times;</span>
+            <h2>Service Provider Login</h2>
+            <form id="providerLoginForm" onsubmit="handleProviderLogin(event)">
+               
+                
+                <div id="other-service" style="display: none;">
+                    <input type="text" placeholder="Specify your service" name="other-service-type">
+                </div>
+                
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
